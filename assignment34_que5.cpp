@@ -2,9 +2,11 @@
 #include<iostream>
 #include<fstream>
 #include<string.h>
+#include<stdlib.h>
 using namespace std;
 int main()
 {
+	string ch;
 	ifstream fin1;
 	fin1.open("c:/file/abc.txt");
 	ifstream fin2;
@@ -21,7 +23,6 @@ int main()
 		cout<<"invalid file name \n";
 		exit(0);
 	}
-	char ch;
 	while(!fin1.eof()==0)
 	{
 		getline(fin1,ch);
@@ -29,7 +30,7 @@ int main()
 	}
 	while(!fin2.eof()==0)
 	{
-		getlint(fin2,ch);
+		getline(fin2,ch);
 		fout<<ch;
 	}
 	cout<<"\n two file have been merged ";
